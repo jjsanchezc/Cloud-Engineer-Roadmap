@@ -1,4 +1,4 @@
-# Cloud Engieeering Roadmap
+# Cloud Engineer Roadmap
 
 ## Step 1
 - [ ] IT Fundamentals
