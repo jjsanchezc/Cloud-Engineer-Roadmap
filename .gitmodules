@@ -1,0 +1,3 @@
+[submodule "CICD/GHActions-test"]
+	path = CICD/GHActions-test
+	url = https://github.com/jjsanchezc/GHActions-test
