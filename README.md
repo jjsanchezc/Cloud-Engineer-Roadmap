@@ -61,20 +61,20 @@
 
 ## Schedule
 
-### Mañana (Diario 3 hr)
+### Mañana (Diario 2 hr)
 #### Lunes a miercoles:
-- Linux (1.5hr)
-- Networking (1.5hr)
+- Linux (1hr)
+- Networking (1hr)
 
 #### Jueves a sabado:
-- Python (1.5)
-- Automatization (1.5)
+- Python (1)
+- Automatization (1)
 
-### Tarde (Diario 3 hr)
+### Tarde (Diario 2 hr)
 #### Lunes a miercoles:
-- Seguridad (3 hr)
-	+ Firewalls (1.5)
-	+ VPN (1.5)
+- Seguridad (2 hr)
+	+ Firewalls (1)
+	+ VPN (1)
 
 #### Jueves a sabado:
 - Bases de datos
