@@ -78,17 +78,17 @@
 
 #### Jueves a sabado:
 - Bases de datos
-	+ SQL (1.5hr)
-	+ NoSQL (1.5hr)
+	+ SQL (1hr)
+	+ NoSQL (1hr)
 
-### Noche (Diario 3 hr)
+### Noche (Diario 2 hr)
 #### Lunes a miercoles:
-- AWS (1.5hr)
-- Docker (1.5hr)
+- AWS (1hr)
+- Docker or Terraform (1hr)
 
 #### Jueves a sabado:
 - Practicar AWS
-- Docker (1.5hr)
+- Docker (1.5hr) 
 
 ### Domingos (2 hr minimo)
 - Repaso de todo

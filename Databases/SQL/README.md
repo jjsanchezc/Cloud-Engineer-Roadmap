@@ -1,5 +1,7 @@
 # SQL
 
+
+
 Database -> table
 
 ask for data:
@@ -25,3 +27,4 @@ ask for data:
 	
 	# Inner join and group by
 	SELECT <table2>.<column_name> FROM <table1> inner join <table2> on <table1>.<PK or FK> = <table2>.<PK or FK> group by <table1>.<column_name>, <table2>.<column_name>
+

@@ -1,6 +1,21 @@
 
 # Basic 
 
+## Linux File System
+15 basic directories
+
+	/ #root directory system
+	/bin #essential binary executables
+	/usr/bin
+	/sbin #System administration binaries
+	/var #Variable data
+	/var/log #logfiles
+	/home #user's home directory
+	/tmp #temporaly files 
+	/root #home directory for root user
+	/etc #system level config files
+	/lib #shared libraries
+
 view current working directory
 ```
 $ pwd
