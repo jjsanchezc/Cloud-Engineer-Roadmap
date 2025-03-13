@@ -1,0 +1,26 @@
+# Use root/example as user/password credentials
+version: '3.1'
+
+services:
+  db:
+      image: mysql
+      restart: "no"
+      environment:
+        MYSQL_ROOT_PASSWORD: kunal123
+        MYSQL_DATABASE: kunal_demo
+      healthcheck:
+        test: ["CMD-SHELL", "pg_isready -U user"]
+        interval: 5s
+        retries: 5
+        timeout: 3s
+  app:
+    build:
+      context: ./nodejs-mysql
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+
+volumes:
+  db_data:
