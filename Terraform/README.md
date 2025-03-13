@@ -75,3 +75,39 @@ a way to prevent it:
 - Terraform refresh:
        in the first scenario we assume it was done by mistake my someone
        in this example was intentional,it will not make any changes to the infra, it will only update the tf statefile
+#### Backend config
+
+- Sensitive data will be visible at the statefile, so it can't be on a visible space
+- backend block defines where terraform stores its state datafiles
+
+### Variables and Outputs
+-  a way to make the code more reusable and readable
+- Types:
+       - Input variables
+       - Output variable 
+
+Variables can be referenced throughout the configuration using the `var` prefix. This system enables infrastructure as code to be more dynamic and adaptable to different environments or use cases.
+
+Local values are referred to as locals and can be declared using the locals block. Local values can be a literal constants, resource attributes, variables, or other local values. Local values are helpful to define expressions or values that you need to use multiple times in the module as it allows the value to be updated easily just by updating the local value. A local value can be accessed using the local argument like local.<value_name>.
+
+to gice value to input vcariables its a good practice to create a `terraform.tfvars` file
+if we want to give the tfvars other name, we could use the `tf plan -var-file="<location>.tfvars"`
+If we want to create different files of vars `*.auto.tfvars`
+For Environment variables `TF_VAR_<name>`, this one is used to store credentials
+Default variable variable.tf
+
+#### Variable precedence
+
+If we have multiple ways to define a variable, it will depend on the priority of each file
+from hig to low:
+- -var or -var-file
+- terraform.tfvars
+- *.auto.tfvars
+- TF_VAR_<name>
+- variables.tf
+### Modules
+Divide  everything into reusable components called `modules`  
+types of modules:
+- `root` module (default)
+- `child` module
+- `published` modules : could be called from terraform registry, there are modules created by providers
