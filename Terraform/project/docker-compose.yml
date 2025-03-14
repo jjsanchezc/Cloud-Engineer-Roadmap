@@ -8,7 +8,7 @@ services:
       environment:
         MYSQL_ROOT_PASSWORD: kunal123
         MYSQL_DATABASE: kunal_demo
-      healthcheck:
+      healthcheck: 
         test: ["CMD-SHELL", "pg_isready -U user"]
         interval: 5s
         retries: 5
