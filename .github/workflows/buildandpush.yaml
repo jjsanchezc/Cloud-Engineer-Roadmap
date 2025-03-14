@@ -16,7 +16,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker image
-      run: docker build Terraform/project/nodejs-mysql --file Terraform/project/nodejs-mysql/Dockerfile --tag jjsanchez1/ghactionstest_node_project:$(date +%s)
+      run: docker build nodejs-mysql --file nodejs-mysql/Dockerfile --tag jjsanchez1/ghactionstest_node_project:$(date +%s)
   push_to_registry:
     name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
