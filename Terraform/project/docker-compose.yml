@@ -10,7 +10,7 @@ services:
         MYSQL_DATABASE: kunal_demo
       healthcheck: 
         test: ["CMD-SHELL", "pg_isready -U user"]
-        interval: 6s
+        interval: 7s
         retries: 5
         timeout: 4s
   app:
