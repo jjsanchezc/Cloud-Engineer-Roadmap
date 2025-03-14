@@ -3,8 +3,9 @@ gccgname: Docker Image CI
 on:
   push:
     branches: [ "master" ]
-  paths:
-    - 'Cloud-Engineer-Roadmap/Terraform/project'
+    paths:
+      - 'Cloud-Engineer-Roadmap/Terraform/project'
+
 
 jobs:
 
