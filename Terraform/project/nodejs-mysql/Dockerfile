@@ -7,7 +7,7 @@ WORKDIR /app
 # Copiar solo los archivos de dependencias para aprovechar la caché
 COPY package*.json ./
 
-# Instalar las dependencias
+# Instalar las dependencia
 RUN npm install
 
 # Copiar el resto de los archivos al contenedor
