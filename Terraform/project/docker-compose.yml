@@ -12,7 +12,7 @@ services:
         test: ["CMD-SHELL", "pg_isready -U user"]
         interval: 6s
         retries: 5
-        timeout: 4s
+        timeout: 3s
   app:
     build:
       context: ./nodejs-mysql
