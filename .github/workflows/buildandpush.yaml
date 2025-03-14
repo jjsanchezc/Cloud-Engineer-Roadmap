@@ -16,7 +16,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag jjsanchez1/ghactionstest_node_project:$(date +%s)
+      run: pwd && ls -la
   push_to_registry:
     name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
