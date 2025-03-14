@@ -1,4 +1,4 @@
-gccgname: Docker Image CI
+name: Docker Image CI
 
 on:
   push:
