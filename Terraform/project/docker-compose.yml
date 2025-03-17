@@ -2,17 +2,7 @@
 version: '3.1'
 
 services:
-  db:
-      image: mysql
-      restart: "no"
-      environment:
-        MYSQL_ROOT_PASSWORD: kunal123
-        MYSQL_DATABASE: kunal_demo
-      healthcheck: 
-        test: ["CMD-SHELL", "pg_isready -U user"]
-        interval: 7s
-        retries: 5
-        timeout: 4s
+  
   app:
     build:
       context: ./nodejs-mysql
@@ -20,7 +10,22 @@ services:
     ports:
       - "3000:3000"
     depends_on:
-      - db
+      db:
+        condition: service_healthy
+  db:
+      image: mysql
+      restart: "no"
+      ports: 
+        - "3306:3306"
+      environment:
+        MYSQL_ROOT_PASSWORD: kunal123
+        MYSQL_DATABASE: kunal_demo
+      
+      healthcheck: 
+        test: ["CMD-SHELL", "mysqladmin", "ping", "--host=localhost", "--user=root", "--password=kunal123"]
+        interval: 5s
+        retries: 5
+        timeout: 3s
 
 volumes:
   db_data:
