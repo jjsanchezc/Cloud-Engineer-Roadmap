@@ -1,8 +1,8 @@
 # Dependency directories
 node_modules/
 
-# dotenv environment variable files
-.env
 
-#
-../docker-compose.yml
+/terraform/.terraform/
+terraform/terraform.tfstate
+terraform/terraform.tfstate.backup
+terraform/.terraform.lock.hcl
