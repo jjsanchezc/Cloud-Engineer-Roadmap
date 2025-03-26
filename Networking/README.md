@@ -1,6 +1,6 @@
 # Networking
 
-# SUBNETTING IP v4
+# SUBNETTING IPv4
 
 ip is divided by 4 octates (from). When doing some ip routing we have 253 unicast options because there are some reserved address, like, 0 because is the network address and 255 that is the broadcast address
 
@@ -46,24 +46,18 @@ to find the ranges of each network I'd have to take value of the last 1 minus 1 
  - 3: 192.168.1.128 - 192.168.1.191
  - 4: 192.168.1.192 - 192.168.1.255
 
+ `Note: if the mask ends in the 3rd octate, you start incremeting in the 3rd octate`
 
-
-# CCNA 200-301
-
-![osi-tcpip](README-images/OsiVTcp.png)
-
-## Switch
-
-Uses L2 (layer 2)
-
-Learns the address of everyone
+When subnetting by host, to find the mask is the same has the host but this time don't pick the one who is bigger, instead pick the last that is lower than the actual number, meaning, if they ask for 10 networks, in the Subnetting network you'll pick 16 (.11110000) but if they ask for 10 hosts you'll pick 8 (.11110000)
 
 
 
+### Exercise
 How can I divide a /24 network into 5 subnets? What would be the new subnet mask, and what are the ranges for each subnet?
 
-base network: 11111111.11111111.11111111.00000000
-result octate: 11111111.11111111.11111111.11100000 because I'll take the first 3 bits (1,2,4), and the increment would be 32: 
+base network: 11111111.11111111.11111111.0
+result octate: 11111111.11111111.11111111.11100000 because I'll take the first 3 bits (1,2,4)
+resulting subnet mask 255.255.255.224 , and the increment would be 32: 
 subnet 1:
  - Network: 192.168.1.0/27
  - 192.168.1.0 - 192.168.1.31
@@ -84,3 +78,21 @@ subnet 5:
  - Network: 192.168.1.128/27
  - 192.168.1.128 - 192.168.1.159
  - broadcast: 192.168.1.159
+
+# SUBNETTING IPv6
+
+8 groups of 2 bytes 
+8 blocks of 4 hex digits
+
+# CCNA 200-301
+
+![osi-tcpip](README-images/OsiVTcp.png)
+
+## Switch
+
+Uses L2 (layer 2)
+
+Learns the address of everyone
+
+
+
