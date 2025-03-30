@@ -5,13 +5,13 @@
 15 basic directories
 
 	/ #root directory system
-	/bin #essential binary executables
-	/usr/bin
+	/bin #essential binary executables for the system
+	/usr/bin # where I can find apps binaries
 	/sbin #System administration binaries
 	/var #Variable data
 	/var/log #logfiles
 	/home #user's home directory
-	/tmp #temporaly files 
+	/tmp #temporary files 
 	/root #home directory for root user
 	/etc #system level config files
 	/lib #shared libraries
@@ -52,12 +52,12 @@ $ rmdir [directory]
 
 ***Note:*** When I remove something it will not go to trash
 
-# Directory Hierarchy
+## Directory Hierarchy
 	$ / 
-	ddd
+	
 
 
-# Echo
+## Echo
 
 Used to print whatever I want
 
@@ -67,18 +67,18 @@ To have a newline and a tab:
 
 	& echo -e "hello \n \t there"
 
-# Touch
+## Touch
 
 If I want to modify a file but in case it doesn't exist, do nothing
 
 	$ touch -c file.txt
 
-# Folder
+## Folder
 To create a folder inside a folder
 
 	$ mkdir -p new_fold/child_fold
 
-# Characters
+## Characters
 
 anything (cualquiercosa)= *:
 
@@ -101,7 +101,7 @@ characters classes:
 	$ [[:lower:]].txt # Lower cases
 	$ [[:upper:]].txt # upper case
 
-# Bible
+## Bible
 
 
 	$ bob=130
@@ -121,8 +121,63 @@ Example:
 To make it permanent:
 	create a .bashrc
 
+## Process
 
-# chmod
+list the process I've running
+
+	$ ps
+
+## Help
+
+To get help with any command
+
+	$ help 
+	$ info <command>
+	$ man <command>
+	$ apropos <keyword> # search that keyword in the manuals
+
+# Users management
+
+## Get users
+
+	$ cat /etc/passwd
+
+## adduser 
+
+	$ sudo adduser <username> #asks for more info 
+	$ sudo useradd <username> # (not recommended) dont ask for much info 
+
+## Delete user
+
+	$ sudo deluser <username>
+	$ sudo userdel <username>
+
+## Groups
+
+### Create a group
+
+	$ sudo groupadd <groupname>
+
+### Get groups
+
+	$ cat /etc/group
+	$ groups
+
+### Add user to group
+
+	$ sudo usermod -G <group_name> <username>  # will add only to that group 
+	$ sudo usermod -aG <group_name> <username> # add to the actual group and the new 
+
+### Remove user from a group
+
+	$ sudo gpasswd -d <username> <group_name>
+
+## modify user account
+
+	$ sudo usermod <username> [<options>]
+## chmod
+
+used for edit file and dir permissions
 
 3 types of permissions
 - Reading (r)
@@ -156,7 +211,7 @@ if we divide the subcolumns we could see:
 - `rwx`: the group have the same permission as the owner
 - `r-x`: the other can read and execute but can't write
 
-## Modifying permissions 
+### Modifying permissions 
 
 To modify permission I have to write `chmod`at the beggining,
 there are 3 ways to modify:
@@ -178,6 +233,17 @@ then if I want to modify for a specific group:
 
 To add all permissions to all of users:
 	$ chmod 777 <file_name>
+
+
+## chown
+
+change owner of files and dir
+
+## Sudo file
+
+to modify permission of sudo file:
+
+	$ sudo visudo  #to get in the file
 
 # Scriptring
 
