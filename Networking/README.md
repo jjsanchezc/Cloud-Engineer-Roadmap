@@ -81,8 +81,7 @@ subnet 5:
 
 # SUBNETTING IPv6
 
-8 groups of 2 bytes 
-8 blocks of 4 hex digits
+8 groups of 2 bytes, 8 blocks of 4 hex digits
 
 # CCNA 200-301
 
