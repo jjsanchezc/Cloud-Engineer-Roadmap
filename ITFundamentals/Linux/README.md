@@ -245,31 +245,97 @@ to modify permission of sudo file:
 
 	$ sudo visudo  #to get in the file
 
-# Scriptring
+# Packages
 
-To start creating a scripting file, it should start with: 
+## package manager
 
-	#! /bin/bash
+.deb is the extention for packages in linux 
 
-That's for choosing which shell will exec the code, then I could start writing.
+### apt
 
-to execute the file:
+advanced package tool
+<br> 
 
-	$ chmod +x <file_name> # to turn into scrip or exec
-	or 
-	$ bash <file_name>.sh 
+	$ sudo apt install <package_name>
 
-To add comments:
+#### get sources
 
-	# this is a comment
-	'this is also a comment'
+	$ sudo apt list --installed
 
 
-### Pipes
-Workflows, the output or the arguments of a script could be used on other sript
+#### update all the list of sources
 
-	$ ls | wc -l
-	$ ls -l | sort -k5 -rn
+	$ sudo apt update
+	$ sudo apt upgrade -y
+
+#### uninstall
+
+	$ sudo apt remove -y <package_name>
+	or
+	$ sudo apt purge <package_name>
+### dpkg
+
+It will manage my packages, but it harder than aptk
+
+for depackage the .deb using dpkg
+
+	$ dpkg -i <file>.deb
+
+### snap
+
+similar to apt
+
+	$ sudo snap install --classic <package_name>
+
+
+# Daemon
+
+Are processes 
+
+## Master daemon
+
+systemd turns on all the services that are required to a correct pc init, is the first procces to be executed
+
+- Service manager: 
+	- systemctl: 
+		
+		$ sudo systemctl <abbr title="status, start, stop, restart, reload, enable, disable, etc... ">< option ></abbr>
+- init system
+
+## Get running services
+
+	$ sudo systemctl lists-units -t service
+
+## How to get active processes
+
+	$ ps -aux
+
+### Note:
+
+unit=daemon
+
+# Kill processes
+
+## get processes
+
+	$ ps  
+	$ ps -u <username>
+	$ pgrep <process_name> # to get the process id
+
+## kill process
+
+	$ kill <process_id>
+	$ kill -l # returns a list of actions I coul'd do 
+
+# background and foreground processes
+
+there are 2 types of processes, the one who runs on the background and the other who runs on the foreground
+
+there's a way to move process from background to foreground:
+	$ bg <process_id> # from foreg to backg
+	$ fg <process_id> # from backg to foreg
+in console, I can't kill a process running on the background, 
+
 
 # References
 

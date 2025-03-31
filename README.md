@@ -53,8 +53,6 @@
 	- Cloud Engineer
 	- Junior Cloud Engineer
 	- Cloud support Associate
-	- Technical support engineer
-	- HelpDesk
 	- DevOps
 	- Platform engineer
 	
