@@ -4,12 +4,12 @@
 
 Database -> table
 
-ask for data:
-
 ## Basic query
-	SELECT <column_name> FROM <table>
-	SELECT <column_name_1>,...,<column_name_n> FROM <table>
-	SELECT * FROM <table>
+```sql
+SELECT <column_name> FROM <table>
+SELECT <column_name_1>,...,<column_name_n> FROM <table>
+SELECT * FROM <table>
+```
 `AS`:
 
 ```sql
@@ -95,4 +95,37 @@ SELECT ROUND(<number>, <decimal_places>);
 
 ```sql
 SELECT * FROM <table_name> WHERE <conditional_1> XOR <conditional_2>;
+```
+
+## Data manipulation
+
+`ALTER TABLE`:
+
+```sql
+
+```
+
+`SHOW TABLE`:
+
+```sql
+```
+
+`CREATE TABLE`:
+
+```sql
+```
+
+`INSERT`:
+
+```sql
+```
+
+`SELECT`:
+
+```sql
+```
+
+`UPDATE`:
+
+```sql
 ```

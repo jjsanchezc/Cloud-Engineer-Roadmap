@@ -2,7 +2,7 @@
 
 ## Step 1
 - [ ] IT Fundamentals
-	- [ ] Linux
+	- [x] Linux
 	- [ ] Windows
 - [ ] Networking
 - [ ] Security

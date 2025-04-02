@@ -42,6 +42,10 @@ To copy a Dir to other Dir:
 
 	$ cp -r #The -r stands for recursive
 
+To create a temporal alias:
+
+	$ alias <alias_name>="command"
+
 
 Deleting Files:
 ```
@@ -51,6 +55,10 @@ $ rmdir [directory]
 ```
 
 ***Note:*** When I remove something it will not go to trash
+
+### Tail
+
+	$ tail <path> # get the last lines of the file
 
 ## Directory Hierarchy
 	$ / 
