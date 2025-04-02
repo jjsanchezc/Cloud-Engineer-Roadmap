@@ -1,2 +1,0 @@
-ls: invalid option -- '2'
-Try 'ls --help' for more information.
