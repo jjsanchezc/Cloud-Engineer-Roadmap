@@ -4,6 +4,11 @@
 
 Database -> table
 
+## Data types
+`int`: integer
+`Float`: decimal
+`varchar`: text
+
 ## Basic query
 ```sql
 SELECT <column_name> FROM <table>
@@ -97,23 +102,46 @@ SELECT ROUND(<number>, <decimal_places>);
 SELECT * FROM <table_name> WHERE <conditional_1> XOR <conditional_2>;
 ```
 
-## Data manipulation
+## Database
 
-`ALTER TABLE`:
+`create database`:
 
 ```sql
-
+create database <database_name>;
 ```
 
-`SHOW TABLE`:
+`show databases`:
 
 ```sql
+show databases;
 ```
 
 `CREATE TABLE`:
 
 ```sql
+CREATE TABLE <table_name> (
+	<attribute_id> <data_type>,
+	<attribute> <data_type>,
+	...
+	<attribute_n> <data_type>,
+	PRIMARY KEY (<attribute>)
+
+);
 ```
+
+`SHOW TABLE`:
+
+```sql
+SHOW TABLE <table_name>;
+```
+
+`ALTER TABLE`:
+
+```sql
+ALTER TABLE <table_name>
+ALTER TABLE <table_name> MODIFY COLUMN <attribute> <data_type> <optinal>;
+```
+## Data manipulation
 
 `INSERT`:
 
@@ -129,3 +157,24 @@ SELECT * FROM <table_name> WHERE <conditional_1> XOR <conditional_2>;
 
 ```sql
 ```
+
+## Example
+example of a full use case for sql
+
+```console
+$  mysql -u USERNAME -p # then enter the password # Now I'm in mysql
+```
+```sql
+create database begginers_database;
+show databases;
+use begginers_database;
+
+CREATE TABLE animales(
+	id int,
+	tipo varchar(255),
+	estado varchar(255),
+	PRIMARY KEY (id)
+);
+
+ALTER TABLE animales MODIFY COLUMN id int auto_increment; -- add a auto increment to id
+INSERT INTO animales (tipo, estado) VALUES ('<value_tipo>','<value_estado>');
