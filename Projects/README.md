@@ -9,16 +9,16 @@
 
 Brief description of the project
 
-[Ver carpeta del proyecto](Cloud-Engineer-Roadmap/tree/master/Projects)
+[Ver carpeta del proyecto](Cloud-Engineer-Roadmap/Projects)
 
 ## Project 2
 
 Brief description of the project
 
-[Ver carpeta del proyecto](Cloud-Engineer-Roadmap/tree/master/Projects)
+[Ver carpeta del proyecto](Cloud-Engineer-Roadmap/Projects)
 
 ## Project 3
 
 Brief description of the project
 
-[Ver carpeta del proyecto](Cloud-Engineer-Roadmap/tree/master/Projects)
+[Ver carpeta del proyecto](Cloud-Engineer-Roadmap/Projects)
