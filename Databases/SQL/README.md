@@ -82,6 +82,13 @@ SELECT <column_name> FROM <table>
 SELECT <column_name_1>,...,<column_name_n> FROM <table>
 SELECT * FROM <table>
 ```
+
+`=`:
+
+```sql
+SELECT * FROM <table> WHERE <condition1> = <value>;
+```
+
 `AS`:
 
 ```sql
@@ -91,7 +98,7 @@ SELECT <column_name> AS <AKA> FROM <table>;
 `BETWEEN`:
 
 ```sql
-SELECT * FROM <table> WHERE <condition1> BETWEEN <value1> AND <value2>;
+SELECT * FROM <table> WHERE <column_name> BETWEEN <value1> AND <value2>;
 ```
 
 `COUNT`:
@@ -100,10 +107,11 @@ SELECT * FROM <table> WHERE <condition1> BETWEEN <value1> AND <value2>;
 SELECT count(<column>) ;
 ```
 
-`=`:
+`DISTINCT`:
 
 ```sql
-SELECT * FROM <table> WHERE <condition1> = <value>;
+-- not duplicated results
+SELECT DISTINCT(<column_name>) ;
 ```
 
 `HAVING`:
@@ -155,13 +163,13 @@ SELECT <column_name>,...,<column_name n> FROM <table1> LEFT JOIN <table2> ON <ta
 
 ```sql
 -- Search for a pattern in a text
-SELECT * FROM <table> WHERE <condition1> LIKE <value>;
+SELECT * FROM <table> WHERE <column_name> LIKE <value>;
 
 -- Find something that ends with a specific value
-SELECT * FROM <table> WHERE <condition1> LIKE "%<value>";
+SELECT * FROM <table> WHERE <column_name> LIKE "%<value>";
 
 -- Find something that starts with a specific value
-SELECT * FROM <table> WHERE <condition1> LIKE "<value>%";
+SELECT * FROM <table> WHERE <column_name> LIKE "<value>%";
 ```
 `max`:
 
@@ -175,17 +183,25 @@ select max(<column>) ...
 SELECT min(<column>) ...
 ```
 
+`NOT IN`:
+```sql
+SELECT * FROM <table> WHERE <column_name> NOT IN (<list of values>)
+```
+
 `NOT LIKE`:
 
 ```sql
-SELECT * FROM <table> WHERE <condition1> NOT LIKE "<value>"
+SELECT * FROM <table> WHERE <column_name> NOT LIKE "<value>"
 ```
 
 `ORDER BY`:
 
 ```sql
-SELECT * FROM <table> ORDER BY <condition1> ASC;  -- Ascending order
-SELECT * FROM <table> ORDER BY <condition1> DESC;  -- Descending order
+SELECT * FROM <table> WHERE <condition> ORDER BY <column_name> ASC;  -- Ascending order
+SELECT * FROM <table> WHERE <condition> ORDER BY <column_name> DESC;  -- Descending order
+
+-- There could be different order by
+SELECT * FROM <table> WHERE <condition> ORDER BY <column_name> DESC,<column_name2>ASC;
 ```
 
 `ROUND`:
