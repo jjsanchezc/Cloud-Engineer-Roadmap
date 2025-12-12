@@ -3,7 +3,7 @@
 ## Step 1
 - [ ] IT Fundamentals
  	- [ ] Linux
- 	- [ ] Windows
+ 	- [ ] bash
  	- [ ] Git
  	- [ ] Neovim
  	- [ ] Tmux
