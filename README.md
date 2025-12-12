@@ -2,11 +2,11 @@
 
 ## Step 1
 - [ ] IT Fundamentals
- - [ ] Linux
- - [ ] Windows
- - [ ] Git
- - [ ] Neovim
- - [ ] Tmux
+ 	- [ ] Linux
+ 	- [ ] Windows
+ 	- [ ] Git
+ 	- [ ] Neovim
+ 	- [ ] Tmux
 - [ ] Networking
 - [ ] Security
 	- [ ] Firewalls
